@@ -39,16 +39,24 @@ const randCrossObject = () => {
 // Generate a random answer
 const randAnswer = () => {
   const answer = [
-    "to get to the other side!",
-    "to go to the library and do some research for their history project!",
-    "they thought they saw a very large burrito on the other side, but were disapointed to find it was only a small child.",
-    "that's where their work was. And although they weren't working that day, they had forgotten there umbrella there and it was starting to rain.",
-    "to get to the other PRIDE!",
-    "it was their TOP SECRET MISSION. Now I'm sorry, but we will have to have you killed.",
-    "just to eat some bananas.",
-    "maybe they wanted to... eat some bananas.",
-    `because the ${randomAnimal()} was chasing them!`,
-    `because they thought they saw a delicioius ${randomAnimal()}!`,
+    "To get to the other side!",
+    "To go to the library and do some research for their history project!",
+    "They thought they saw a very large burrito on the other side, but were disapointed to find it was only a small child.",
+    "That's where their work was. And although they weren't working that day, they had forgotten there umbrella there and it was starting to rain.",
+    "It was their TOP SECRET MISSION. Now I'm sorry, but we will have to have you killed.",
+    "Just to eat some bananas.",
+    "Maybe they wanted to... eat some bananas.",
+    `Because the ${randomAnimal()} was chasing them!`,
+    `Because they thought they saw a delicioius ${randomAnimal()}!`,
   ];
   return answer[Math.floor(Math.random() * answer.length)];
 };
+
+// Function to display the final joke with a small time delay between question and answer
+const displayJoke = () => {
+  console.log(`Why did the ${randomAnimal()} cross the ${randCrossObject()}?`);
+  setTimeout(() => {
+    console.log(`${randAnswer()}`);
+  }, 2300);
+};
+displayJoke();
